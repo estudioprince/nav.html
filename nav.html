@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Poppins', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #7f03fc;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i></a>
+		<a id="sobre nós" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-user"></i> Sobre Nós</a>
+		<a id="serviços" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-folder"></i> Serviços</a>
+		<a id="portfólio" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-pen-nib"></i> Portfólio</a>
+		<a id="agendar reunião" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-days"></i> Agendar Reunião</a>
+		<a id="redes sociais" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-heart"></i> Redes Sociais</a>
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://estudioprince.notion.site/Estudio-Prince-71a2e3929f384a81b327320b44a27b4b?pvs=4", '_blank').focus();
+			else if (id == "sobre nós")
+				window.open("https://www.notion.so/estudioprince/Sobre-N-s-ff3c55014768481ebae32150bcf1fa3b?pvs=4", '_blank').focus();
+			else if (id == "serviços")
+				window.open("https://www.notion.so/estudioprince/Servi-os-8aeff67cd3894abd9c46f0cb45c2ab2b?pvs=4", '_blank').focus();
+			else if (id == "portfólio")
+				window.open("https://www.notion.so/estudioprince/Portf-lio-43df1cced43446f09251ba7b2de5e13d?pvs=4", '_blank').focus();
+			else if (id == "agendar reunião")
+				window.open("https://calendly.com/estudioprince", '_blank').focus();
+			else if (id == "redes sociais")
+				window.open("https://bento.me/estudioprince", '_blank').focus();
+			
+
+		}
+	</script>
+
+
+</body>
+
+</html>
